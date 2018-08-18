@@ -42,6 +42,7 @@ group :development, :test do
 end
 
 gem 'friendly_id', '~> 5.2.0'
+gem 'devise', '~> 4.4', '>= 4.4.3'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
