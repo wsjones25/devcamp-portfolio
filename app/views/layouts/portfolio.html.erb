@@ -3,9 +3,7 @@
   <head>
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,14 +11,9 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
     <%= render "shared/nav", location: 'top' %>
-    
     <%= login_helper %>
-
     <%= yield %>
-    <% if session[:source] %>
-      <p>Thanks for visting me from <%= session[:source] %></p>
-    <% end %>
+    <%= source_helper("application") %>
   </body>
 </html>
