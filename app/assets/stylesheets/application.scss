@@ -174,7 +174,26 @@ body {
   color: black;
 }
 
+.registered-text {
+    text-align: right;
+    margin-bottom: 0.5rem;
+  }
+
 .starter-template {
   padding: 9rem 1.5rem;
   text-align: center;
 }
+
+/*
+ * Bootstrap overrides
+ */
+
+ #bootstrap-overrides {
+  margin-right: 0px;
+  margin-left: 0px;
+  h2 {
+    padding-left: 15px;
+    margin-top: 0.5rem;
+  }
+ }
+
