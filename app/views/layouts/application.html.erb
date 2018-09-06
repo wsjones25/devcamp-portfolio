@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
+
     <meta name="keywords" content="<%= @seo_keywords %>" />
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render "shared/nav", location: 'top' %>
-    <%= login_helper %>
-    <%= yield %>
-    <%= copyright_generator %>
-    <%= source_helper("application") %>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <%= render "shared/application_nav" %>
+      <%= login_helper %>
+      <%= yield %>
+      <%= copyright_generator %>
+      <%= source_helper("application") %>
+    </div>
   </body>
 </html>
