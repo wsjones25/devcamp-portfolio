@@ -14,11 +14,8 @@
   </head>
 
   <body>
-    <div class="container">
-      <%= render 'shared/application_nav' %>
-    </div>
-    
-    <%= render 'shared/portfolio_masthead' %>
+    <%= render 'shared/application_nav' %>
+    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
 
     <%= yield %>
 
